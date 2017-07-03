@@ -1,19 +1,27 @@
 body {
   font-family: 'Merriweather', serif;
 }
+main {
+  background-color: #F2F1E8;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+footer {
+  background-color: #2B2F26;
+  color: #FFFFFF;
+  padding: 2em;
 }
 main img {
   height: auto;
   width: 50%;
+}
+.nlform {
+  background-image: url(images/background-2.jpg);
+  height: 100vh;
+  width: 100vh;
 }
 .index {
   margin: 0;
@@ -24,7 +32,13 @@ main img {
   background-color: #FFFFFF;
   display: flex;
   text-transform: uppercase;
-  justify-content: center;
+}
+.form {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F1E8;
 }
 .nav a {
   color: #2B2F26;
@@ -32,8 +46,6 @@ main img {
   justify-content: space-between;
   padding: 1em;
 }
-
-
 /*
 font-family: 'Merriweather', serif;
 font-family: 'Roboto', sans-serif;
