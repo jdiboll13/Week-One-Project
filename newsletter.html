@@ -8,6 +8,7 @@
     @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i');
   </style>
   <link href="styles.css" rel="stylesheet">
+  <link rel="shortcut icon" href="images/bent-creek-logo-coral.png" type="image/x-icon">
 </head>
 
 <body>
@@ -23,20 +24,29 @@
     <div class="nlform">
       <form class="form" action="./process_form_data.php" method="post">
         <h1>Sign Up for Our Weekly Newsletter</h1>
-
         <h2>Stay up to date with events, activities, news and specials.</h2>
-
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name">
-
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-
-        <button type="button" name="submit">Submit</button>
+        <input type="text" name="name" id="nameInput" placeholder="Name">
+        <input type="email" name="email" id="emailInput" placeholder="Email">
+        <button type="button" name="submit" id="signupButton">Submit</button>
       </form>
     </div>
-    <footer>Copyright 2017, Bent Creek Ceramics</footer>
   </div>
+  <script type="text/javascript">
+  var nameInput = document.getElementById('nameInput');
+  var emailInput = document.getElementById('emailInput');
+  var signupButton = document.getElementById('signupButton');
+  signupButton.addEventListener('click', function(e) {
+    var nameVal = nameInput.value;
+    var emailVal = emailInput.value;
+    if (nameVal && emailVal) {
+      alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+      nameInput.value = "";
+      emailInput.value = "";
+    } else {
+      alert('We would love for you to sign up, please provide both your name and email address.');
+    }
+  });
+</script>
 </body>
 
 </html>
